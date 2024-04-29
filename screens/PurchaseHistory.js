@@ -10,7 +10,7 @@ const PurchaseHistory = () => {
 
     useEffect(() => {
         console.log("Updated purchases:", user.purchases);
-    }, [user.purchases]); // Log updated purchases whenever user.purchases changes
+    }, [user.purchases]); 
 
     const handleBack = () => {
         navigation.goBack();
@@ -27,8 +27,6 @@ const PurchaseHistory = () => {
             alert('Error during refresh. Please try again.');
         }
     };
-
-    //console.log(user.purchases);
 
   return (
     <View style={styles.container}>

@@ -1,3 +1,8 @@
+/*
+A portion of the original code was written in TypeScript by Simon Grimm from  https://galaxies.dev/react-native-login-jwt-auth
+YouTube video: https://www.youtube.com/watch?v=9vydY9SDtAo&t=1329s&ab_channel=SimonGrimm
+*/
+
 import { createContext, useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import * as SecureStore from 'expo-secure-store';
@@ -5,7 +10,7 @@ import * as SecureStore from 'expo-secure-store';
 const TOKEN_KEY = 'authToken';
 const USER_KEY = 'userData';
 
-export const API_URL = 'http://52.90.52.119:3010';
+export const API_URL = 'http://34.205.33.41:3010';
 const AuthContext = createContext({});
 
 export const useAuth = () => {
@@ -109,7 +114,7 @@ export const AuthProvider = ({ children }) => {
 
 const updatePurchaseHistory = async () => {
     try {
-        const result = await axios.get(`${API_URL}/viewCart`, {
+        const result = await axios.post(`${API_URL}/viewCart`, {
             headers: {
                 Authorization: `Bearer ${authState.token}` 
             }

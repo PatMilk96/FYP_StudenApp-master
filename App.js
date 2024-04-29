@@ -1,6 +1,6 @@
 // import * as React from 'react';
-import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, ScrollView, Image, ImageBackground  } from 'react-native';
+import React from 'react';
+import {Button} from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { AuthProvider, useAuth } from './auth';
